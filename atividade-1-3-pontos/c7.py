@@ -163,10 +163,13 @@ for produto in acessos:
     )
 
 # sequencia com blocos repetidos
-acessos_repetidos = []
+acessos_blocos = []
 
-for produto in acessos:
-    acessos_repetidos.extend([produto] * 3)
+for produto in dict.fromkeys(acessos):
+    quantidade = acessos.count(produto)
+    acessos_blocos.extend(
+        [produto] * quantidade
+    )
 
 
 arvore_repetida = criar_arvore()
@@ -175,10 +178,10 @@ console.print(
     "\n[bold cyan]=== Sequência com blocos repetidos ===[/bold cyan]"
 )
 
-for produto in acessos_repetidos:
+for produto in acessos_blocos:
     arvore_repetida.buscar(produto)
-
     console.print(
         f"Acesso: [yellow]{produto}[/yellow] "
         f"-> Raiz: [green]{arvore_repetida.raiz.chave}[/green]"
     )
+  
