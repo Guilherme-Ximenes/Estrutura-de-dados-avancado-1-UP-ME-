@@ -219,3 +219,12 @@ tabela = pd.DataFrame(resultados)
 
 print("\nComparação de alturas:\n")
 console.print(tabela.to_string(index=False))
+
+''' 
+EXPLICAÇÃO:
+As alturas diferem porque a BST comum não realiza balanceamento automático, já a AVL sim. 
+Na BST, quando os dados são inseridos em ordem crescente, os nós tendem a ser adicionados sempre 
+no mesmo lado da árvore, fazendo com que sua estrutura pareça com uma lista e sua altura aumente 
+significativamente. Na AVL, por outro lado, é realizado rotações sempre que necessário para manter o balanceamento, 
+fazendo com que sua altura permaneça próxima de O(log n) independentemente da ordem de inserção.
+'''
