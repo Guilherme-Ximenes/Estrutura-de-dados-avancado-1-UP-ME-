@@ -125,3 +125,9 @@ for prefixo in prefixos:
             console.print(
                 f"{termo} - {buscas} buscas"
             )
+'''
+Explicação:
+A Trie permite armazenar palavras compartilhando seus prefixos e realizar buscas de forma caractere por caractere. 
+A busca por palavra completa verifica também se o último nó marca o fim de uma palavra, enquanto a busca por prefixo 
+localiza o nó correspondente ao prefixo e percorre apenas os seus descendentes. 
+'''
